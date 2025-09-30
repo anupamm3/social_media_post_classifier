@@ -1,0 +1,103 @@
+{
+  "dataset_analysis": {
+    "total_files": 4,
+    "analysis_date": "2025-09-30",
+    "files": {
+      "d_tweets.csv": {
+        "rows": 3497,
+        "columns": ["id", "conversation_id", "created_at", "date", "timezone", "place", "tweet", "language", "hashtags", "cashtags", "user_id", "user_id_str", "username", "name", "day", "hour", "link", "urls", "photos", "video", "thumbnail", "retweet", "nlikes", "nreplies", "nretweets", "quote_url", "search", "near", "geo", "source", "user_rt_id", "user_rt", "retweet_id", "reply_to", "retweet_date", "translate", "trans_src", "trans_dest"],
+        "text_column": "tweet", 
+        "id_column": "id",
+        "user_column": "user_id",
+        "label_column": null,
+        "inferred_label": "depression",
+        "sample_texts": [
+          "the real reason why you're sad? you're attached to people who have been distant with you. you're paying attention to people who ignore you. you make time for people who are \"too busy\" for you. you're too caring to people who are care less when it comes to you. let those people go",
+          "my biggest problem is overthinking everything",
+          "the worst sadness is the sadness you've taught yourself to hide."
+        ],
+        "missing_percentage": {
+          "tweet": "0%",
+          "place": "100%",
+          "timezone": "0%"
+        },
+        "detected_language": "en"
+      },
+      "non_d_tweets.csv": {
+        "rows": 4810,
+        "columns": ["id", "conversation_id", "created_at", "date", "timezone", "place", "tweet", "language", "hashtags", "cashtags", "user_id", "user_id_str", "username", "name", "day", "hour", "link", "urls", "photos", "video", "thumbnail", "retweet", "nlikes", "nreplies", "nretweets", "quote_url", "search", "near", "geo", "source", "user_rt_id", "user_rt", "retweet_id", "reply_to", "retweet_date", "translate", "trans_src", "trans_dest"],
+        "text_column": "tweet",
+        "id_column": "id", 
+        "user_column": "user_id",
+        "label_column": null,
+        "inferred_label": "non_depression",
+        "sample_texts": [
+          "Touch Passes are the new ASMR",
+          "12 years ago, I called my dad and he gave me some great advice. A short (1 min) story..",
+          "There are 6,500 languages yet I choose to only speak facts"
+        ],
+        "missing_percentage": {
+          "tweet": "0%",
+          "place": "100%", 
+          "timezone": "0%"
+        },
+        "detected_language": "en"
+      },
+      "clean_d_tweets.csv": {
+        "rows": 3083,
+        "columns": ["id", "conversation_id", "created_at", "date", "timezone", "place", "tweet", "language", "hashtags", "cashtags", "user_id", "user_id_str", "username", "name", "day", "hour", "link", "urls", "photos", "video", "thumbnail", "retweet", "nlikes", "nreplies", "nretweets", "quote_url", "search", "near", "geo", "source", "user_rt_id", "user_rt", "retweet_id", "reply_to", "retweet_date", "translate", "trans_src", "trans_dest"],
+        "text_column": "tweet",
+        "id_column": "id",
+        "user_column": "user_id", 
+        "label_column": null,
+        "inferred_label": "depression",
+        "sample_texts": [
+          "the real reason why you be sad you be attach to people who have be distant with you you be pay attention to people who ignore you you make time for people who be too busy for you you be too care to people who be care less when it come to you let those people go",
+          "my biggest problem be overthinking everything",
+          "the worst sadness be the sadness you have teach yourself to hide"
+        ],
+        "missing_percentage": {
+          "tweet": "0%",
+          "place": "100%",
+          "timezone": "0%"
+        },
+        "detected_language": "en",
+        "preprocessing_notes": "Text appears to be lemmatized/stemmed (e.g., 'you're' -> 'you be')"
+      },
+      "clean_non_d_tweets.csv": {
+        "rows": 4688,
+        "columns": ["id", "conversation_id", "created_at", "date", "timezone", "place", "tweet", "language", "hashtags", "cashtags", "user_id", "user_id_str", "username", "name", "day", "hour", "link", "urls", "photos", "video", "thumbnail", "retweet", "nlikes", "nreplies", "nretweets", "quote_url", "search", "near", "geo", "source", "user_rt_id", "user_rt", "retweet_id", "reply_to", "retweet_date", "translate", "trans_src", "trans_dest"],
+        "text_column": "tweet",
+        "id_column": "id",
+        "user_column": "user_id",
+        "label_column": null, 
+        "inferred_label": "non_depression",
+        "sample_texts": [
+          "touch pass be the new asmr",
+          "12 years ago i call my dad and he give me some great advice a short 1 min story",
+          "there be 6500 languages yet i choose to only speak facts"
+        ],
+        "missing_percentage": {
+          "tweet": "0%",
+          "place": "100%",
+          "timezone": "0%"
+        },
+        "detected_language": "en",
+        "preprocessing_notes": "Text appears to be lemmatized/stemmed (e.g., 'are' -> 'be')"
+      }
+    },
+    "summary": {
+      "task_type": "binary_classification",
+      "classes": ["depression", "non_depression"], 
+      "total_samples": 16078,
+      "class_balance": {
+        "depression": 6580,
+        "non_depression": 9498
+      },
+      "text_already_available": true,
+      "hydration_needed": false,
+      "recommended_datasets": ["d_tweets.csv", "non_d_tweets.csv"],
+      "preprocessing_status": "Both raw and preprocessed versions available"
+    }
+  }
+}

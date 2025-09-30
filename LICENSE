@@ -1,0 +1,61 @@
+MIT License
+
+Copyright (c) 2024 Mental Health Tweet Classifier Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## IMPORTANT DISCLAIMER
+
+This software is developed for research and educational purposes only. It is 
+NOT intended for clinical diagnosis, medical assessment, crisis intervention, 
+or any healthcare-related decision making.
+
+### ⚠️ CRITICAL LIMITATIONS
+
+- **NOT A MEDICAL DEVICE**: This software has not been validated for clinical use
+- **NO MEDICAL WARRANTIES**: Results should never influence medical decisions  
+- **RESEARCH ONLY**: Intended solely for academic research and education
+- **BIAS AND ERRORS**: Machine learning models may contain biases and produce errors
+- **PROFESSIONAL CONSULTATION REQUIRED**: Always consult qualified mental health professionals
+
+### 🆘 CRISIS RESOURCES
+
+If you or someone you know is in crisis, please contact:
+- US National Suicide Prevention Lifeline: 988
+- US Crisis Text Line: Text HOME to 741741
+- UK Samaritans: 116 123
+- International: https://www.iasp.info/resources/Crisis_Centres/
+
+### 📋 RESPONSIBLE USE
+
+By using this software, you acknowledge that:
+1. You will use it only for appropriate research or educational purposes
+2. You will not use it for medical diagnosis or clinical decision-making
+3. You understand the limitations and potential biases of AI systems
+4. You will include appropriate disclaimers in any derivative work
+5. You will respect privacy and obtain proper consent when using with human data
+
+For full ethical guidelines, see docs/ethics.md in this repository.
+
+---
+
+*This license includes specific provisions for responsible AI development in 
+sensitive domains. Please review the ethical guidelines before use.*
