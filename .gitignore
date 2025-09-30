@@ -137,16 +137,20 @@ data/cache/
 data/embeddings/
 
 # Model directories (don't commit large model files)
-models/
+# models/  # Allow models directory for baseline deployment models
 experiments/
 checkpoints/
 saved_models/
 *.pkl
-*.joblib
+# *.joblib  # Allow .joblib files for baseline models
 *.pt
 *.pth
 *.bin
 *.h5
+
+# Allow baseline model files for deployment
+!models/baseline/
+!models/baseline/*.joblib
 
 # Reports and outputs
 reports/figures/
