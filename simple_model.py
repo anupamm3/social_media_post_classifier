@@ -24,6 +24,17 @@ class SimpleModel:
             model_file = self.model_path / "logistic_model.joblib"
             vectorizer_file = self.model_path / "tfidf_vectorizer.joblib"
             
+            # First, try to ensure model exists (auto-train if needed)
+            if not (model_file.exists() and vectorizer_file.exists()):
+                try:
+                    from auto_train import ensure_model_exists
+                    if ensure_model_exists():
+                        pass  # Model was created successfully
+                    else:
+                        return False
+                except ImportError:
+                    return False
+            
             if model_file.exists() and vectorizer_file.exists():
                 self.model = joblib.load(model_file)
                 self.vectorizer = joblib.load(vectorizer_file)
