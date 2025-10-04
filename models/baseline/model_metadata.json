@@ -1,0 +1,21 @@
+{
+  "model_type": "Optimized Logistic Regression",
+  "accuracy": 0.8573148705599036,
+  "improvement_over_baseline": 0.0012040939193256328,
+  "improvement_percentage": 0.14064697609000534,
+  "features": 10022,
+  "training_samples": 6644,
+  "test_samples": 1661,
+  "best_params": {
+    "C": 5.0,
+    "class_weight": {
+      "0": 1,
+      "1": 1.2
+    },
+    "max_iter": 1000,
+    "solver": "lbfgs"
+  },
+  "cv_mean_score": 0.8606261388669803,
+  "cv_std_score": 0.00327568468250191,
+  "optimization_date": "2025-10-04 15:43:40"
+}

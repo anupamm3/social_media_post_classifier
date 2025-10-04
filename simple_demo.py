@@ -1,5 +1,26 @@
 """
-Simplified Streamlit demo for Mental Health Tweet Classifier.
+Simplified St# Crisis resourc# Crisis resources
+CRISIS_RESOURCES = {
+    "📞 US National Suicide Prevention Lifeline": "988",
+    "💬 US Crisis Text Line": "Text HOME to 741741", 
+    "☎️ UK Samaritans": "116 123",
+    "🌐 International Crisis Lines": "https://www.iasp.info/resources/Crisis_Centres/"
+}SIS_RESOURCES = {
+    "📞 US National Suicid    # Page config - Hide default Streamlit menu items
+    st.set_page_config(
+        page_title="Mental Health AI Research - Tweet Depression Classifie        <h1 style="margin: 0; font-size: 2.8rem; font-weight: 700; 
+                   background: linear-gradient(90deg, #ffffff 0%, #667eea 50%, #19a7ff 100%); 
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                   text-shadow: 0 0 20px rgba(102, 126, 234,             <h4 style='margin: 0; font-weight: 600; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0,0,0,0.2);'>
+                🔬 Mental Health AI Research Project
+            </h4>);">
+            🔬 Mental Health AI Research
+        </h1>       page_icon="🔬",
+        layout="wide",vention Lifeline": "988",
+    "💬 US Crisis Text Line": "Text HOME to 741741", 
+    "☎️ UK Samaritans": "116 123",
+    "🌐 International Crisis Lines": "https://www.iasp.info/resources/Crisis_Centres/"
+} demo for Mental Health Tweet Classifier.
 """
 
 import streamlit as st
@@ -18,10 +39,10 @@ except ImportError:
 
 # Crisis resources
 CRISIS_RESOURCES = {
-    "🇺🇸 US National Suicide Prevention Lifeline": "988",
-    "🇺🇸 Crisis Text Line": "Text HOME to 741741", 
-    "🇬🇧 UK Samaritans": "116 123",
-    "🌍 International Crisis Lines": "https://www.iasp.info/resources/Crisis_Centres/"
+    "📞 US National Suicide Prevention Lifeline": "988",
+    "💬 US Crisis Text Line": "Text HOME to 741741", 
+    "☎️ UK Samaritans": "116 123",
+    "� International Crisis Lines": "https://www.iasp.info/resources/Crisis_Centres/"
 }
 
 def show_crisis_resources():
@@ -32,7 +53,7 @@ def show_crisis_resources():
     This tool is NOT for crisis intervention or medical diagnosis.
     """)
     
-    with st.expander("🆘 Crisis Resources - Click Here for Help", expanded=False):
+    with st.expander("🚨 Crisis Resources - Click Here for Help", expanded=False):
         st.markdown("### Immediate Help Resources:")
         
         for resource, contact in CRISIS_RESOURCES.items():
@@ -78,12 +99,17 @@ def show_disclaimers():
 def main():
     """Main Streamlit application."""
     
-    # Page config
+    # Page config - Hide default Streamlit menu items
     st.set_page_config(
         page_title="Mental Health AI Research - Tweet Depression Classifier",
-        page_icon="🧠",
+        page_icon="�",
         layout="wide",
-        initial_sidebar_state="expanded"
+        initial_sidebar_state="expanded",
+        menu_items={
+            'Get Help': None,
+            'Report a bug': None,
+            'About': None
+        }
     )
     
     # Modern CSS with glassmorphism effects and animations
@@ -227,7 +253,7 @@ def main():
                    background: linear-gradient(90deg, #ffffff 0%, #667eea 50%, #19a7ff 100%); 
                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
                    text-shadow: 0 0 20px rgba(102, 126, 234, 0.5);">
-            🧠 Mental Health AI Research
+            � Mental Health AI Research
         </h1>
         <h3 style="margin: 15px 0; font-weight: 300; color: #e2e8f0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
             Advanced Depression Detection in Social Media Text
@@ -238,8 +264,8 @@ def main():
     </div>
     """, unsafe_allow_html=True)
     
-    # Dark Glassmorphism Project Overview
-    st.markdown("""
+    # Store About section and Crisis resources HTML to display later (after analysis section)
+    about_section_html = """
     <div style="background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(20px); padding: 2rem; 
                 border-radius: 20px; margin-bottom: 2rem; border: 1px solid rgba(255, 255, 255, 0.15);
                 box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);">
@@ -257,10 +283,7 @@ def main():
             </strong>
         </p>
     </div>
-    """, unsafe_allow_html=True)
-    
-    # Show crisis resources prominently
-    show_crisis_resources()
+    """
     
     # Glassmorphism Sidebar
     st.sidebar.markdown("""
@@ -363,7 +386,7 @@ def main():
     # Modern Analysis button
     col1, col2, col3 = st.columns([2, 1, 1])
     with col2:
-        analyze_clicked = st.button("� Analyze Text", type="primary", disabled=not user_text.strip(), use_container_width=True)
+        analyze_clicked = st.button("🔍 Analyze Text", type="primary", disabled=not user_text.strip(), use_container_width=True)
     
     if analyze_clicked:
         
@@ -475,7 +498,7 @@ def main():
                     confidence_bg = "#fff8e1"
                 else:
                     confidence_text = "Low Confidence"
-                    confidence_icon = "�"
+                    confidence_icon = "⚠️"
                     confidence_bg = "#ffeaa7"
                 
                 # Glassmorphism confidence indicator
@@ -544,6 +567,11 @@ def main():
                 st.error(f"Error during analysis: {e}")
                 st.info("Please try again or contact support if the issue persists.")
     
+    # Show About section and Crisis resources at the bottom for improved UX flow
+    st.markdown("---")
+    st.markdown(about_section_html, unsafe_allow_html=True)
+    show_crisis_resources()
+    
     # Show disclaimers at the bottom
     show_disclaimers()
     
@@ -556,7 +584,7 @@ def main():
                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);'>
         <div style='color: white;'>
             <h4 style='margin: 0; font-weight: 600; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0,0,0,0.2);'>
-                🧠 Mental Health AI Research Project
+                � Mental Health AI Research Project
             </h4>
             <p style='margin: 1.5rem 0; opacity: 0.95; font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0,0,0,0.1);'>
                 Advanced NLP for Mental Health Insights | Built with Machine Learning & Compassion
